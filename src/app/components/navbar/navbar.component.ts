@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { window } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
@@ -8,16 +9,18 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
 
   isMenuOpen = false;
+  innerWidth: any;
 
   constructor() { }
 
   ngOnInit(): void {
-
   }
 
   handleOpenMenu(){
     this.isMenuOpen = !this.isMenuOpen
-    console.log(this.isMenuOpen)
+    if(this.isMenuOpen){
+
+    }
   }
 
 }
