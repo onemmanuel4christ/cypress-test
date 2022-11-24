@@ -1,0 +1,68 @@
+<nav class="flex justify-between items-center py-[42px] w-full relative">
+ <div>
+  <a href="/" >
+    <img src="../../../assets/images/Dananz.svg" alt="logo" class="w-[126px] object-cover">
+  </a>
+ </div>
+
+<div>
+  <svg
+  xmlns="http://www.w3.org/2000/svg"
+  id="menu-button"
+  class="h-6 w-6 cursor-pointer md:hidden block"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke="currentColor"
+  (click)="handleOpenMenu()"
+>
+  <path
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    d="M4 6h16M4 12h16M4 18h16"
+  />
+</svg>
+
+  <div class="hidden md:block">
+      <ul class="flex gap-[74px] items-center text-2xl text-[#333333] text-[16px]">
+        <li class="cursor-pointer">
+          <a href="/">Home</a>
+        </li>
+        <li class="cursor-pointer">\
+          <a href="/">About Us</a>
+        </li>
+        <li class="cursor-pointer">
+          <a href="/">Services</a>
+        </li>
+        <li class="cursor-pointer">
+          <a href="/">Our Teams</a>
+        </li>
+        <li>
+          <button class="bg-[#2C3878] w-[142px] h-[49px] text-[#fff]">Contact Us</button>
+        </li>
+      </ul>
+  </div>
+  <div *ngIf="isMenuOpen" class="block md:hidden absolute top-0 left-0 w-[100%] h-[100vh] z-50 overflow-hidden bg-[#333333] p-10">
+<div (click)="handleOpenMenu()" class="float-right text-[#FFFF] cursor-pointer px-2">X</div>
+    <ul class="text-[#FFF] text-[16px]">
+      <li class="cursor-pointer py-10">
+        <a href="/">Home</a>
+      </li>
+      <li class="cursor-pointer py-10">
+        <a href="/">About Us</a>
+      </li>
+      <li class="cursor-pointer py-10">
+        <a href="/">Services</a>
+      </li>
+      <li class="cursor-pointer py-10">
+        <a href="/">Our Teams</a>
+      </li>
+      <li>
+        <a href="/">
+        <button class="bg-[#2C3878] w-[142px] h-[49px] text-[#fff]">Contact Us</button>
+        </a>
+      </li>
+    </ul>
+</div>
+</div>
+</nav>
